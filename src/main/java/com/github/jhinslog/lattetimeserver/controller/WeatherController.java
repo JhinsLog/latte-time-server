@@ -1,6 +1,6 @@
 package com.github.jhinslog.lattetimeserver.controller;
 
-import com.github.jhinslog.kma.dto.ApiResponse;
+import com.github.jhinslog.lattetimeserver.dto.UltraSrtNcstResponse;
 import com.github.jhinslog.lattetimeserver.service.WeatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class WeatherController {
     private final WeatherService weatherService;
 
     @GetMapping("/ultra-srt-ncst")
-    public ApiResponse getUltraSrtNcst(
+    public UltraSrtNcstResponse getUltraSrtNcst(
             @RequestParam String baseDate,
             @RequestParam String baseTime,
             @RequestParam int nx,
